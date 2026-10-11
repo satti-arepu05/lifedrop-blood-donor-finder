@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: lifedrop-blood-donor-finder
+    runtime: node
+    plan: free
+    buildCommand: npm run install:all && npm run seed && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: JWT_SECRET
+        generateValue: true
