@@ -11,6 +11,10 @@ client/dist/
 .env
 server/.env
 
+# SQLite WAL and shared memory files
+*.db-shm
+*.db-wal
+
 # Logs
 *.log
 npm-debug.log*
